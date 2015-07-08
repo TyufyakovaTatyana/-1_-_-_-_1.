@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Решение задачи №117</title>
+</head>
+
+<body>
+
+<p id="str1"> Введите натуральное число n для первой задачи </p>
+
+<button onclick="MyFunction()">Ввести числo и найти произведение n первых членов</button>
+
+<p id="str2"> Ответ: </p>
+
+
+
+<p id="str3"> Введите натуральное число m для второй задачи </p>
+
+<button onclick="MyFunction1()">Ввести числo и найти произведение m первых членов</button>
+
+<p id="str4"> Ответ: </p>
+
+
+
+<script>
+
+ function MyFunction() {
+
+var n = prompt('Введите число n','');
+
+document.getElementById('str1').innerHTML = 'Число первых членов:  ' + n ;
+
+var S=1;
+var P;
+
+for(var i=1; i<=n; i++)
+{
+	P = (2*i - 1)/(2*i);
+	S=S*P; 
+}
+
+document.getElementById('str2').innerHTML = 'Ответ: ' + S ;
+}
+
+
+function MyFunction1() {
+
+var m = prompt('Введите число m','');
+
+document.getElementById('str3').innerHTML = 'Число первых членов:  ' + m ;
+
+var M=1;
+var N;
+
+for(var k=2; k<=m; k++)
+{
+	N = (2*k - 1)/k;
+	M=M*N; 
+}
+
+document.getElementById('str4').innerHTML = 'Ответ: ' + M ;
+}
+
+
+</script>
+
+
+</body>
+</html>
