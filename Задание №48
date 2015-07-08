@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Решение задачи №48</title>
+</head>
+
+<body>
+
+<p> Введите действительные числа a,b,c. <strong>Число а НЕ ДОЛЖНО БЫТЬ равно нулю!</strong> </p>
+
+
+
+<button onclick="MyFunction()">Ввести числа и найти корни уравнения</button>
+
+<p id="str1"> Уравнение примет вид: </p>
+
+<p id="str2"> Корни уравнения </p>
+
+<script>
+
+ function MyFunction(){
+var a=prompt('a = ?','');
+var b=prompt('b = ?','');
+var c=prompt('c = ?','');
+
+if (a == 0) 
+{ 
+alert("Введите число а, отличное от нуля!"); 
+} 
+
+else
+{
+document.getElementById('str1').innerHTML = 'Уравнение примет вид: ' + (a +'x^2'+' + ' + b + 'x' + ' + '+ ( c )+ ' = 0') ; 
+}
+
+var A = 2 * a;
+var D = b * b - 4 * a * c;
+
+if(D < 0)
+{
+alert('Действительных корней нет!');
+document.getElementById('str2').innerHTML = 'Корней нет';
+}
+
+if(D == 0)
+{
+var x = -b / A;
+alert('Действительный корень только один:      ' + x);
+document.getElementById('str2').innerHTML = 'Единственный корень :  ' + x ;
+}
+
+if(D > 0)
+{
+var x1 = (-b + D)/A;
+var x2 = (-b - D)/A;
+alert('Действительных корня два:      ' + x1 + '  ;  ' + x2);
+document.getElementById('str2').innerHTML = 'Корни уравнения :  ' + x1 + '  ;  ' + x2 ;
+}
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
